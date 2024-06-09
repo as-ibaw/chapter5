@@ -1,0 +1,34 @@
+scalar GraphQLDate
+
+type Issue {
+  _id: ID
+  id: Int!
+  title: String
+  status: String
+  owner: String
+  effort: Int
+  created: GraphQLDate
+  due: GraphQLDate
+  description: String
+}
+
+"Toned downs Issue, used as inputs, without server generated values."
+input IssueInputs {
+  title: String!
+  "Optional, if not suplied, will be set to 'New'."
+  status: String
+  owner: String
+  effort: Int
+  due: GraphQLDate
+}
+
+type Query {
+  about: String!
+  issueList: [Issue!]!
+}
+
+type Mutation {
+  setAboutMessage(message: String!): String
+  issueAdd(issue: IssueInputs!): Issue!
+  GraphQLDate: String
+}

@@ -1,0 +1,23 @@
+{
+  "name": "chapter5",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon -w server -e js,graphql server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.26.2",
+    "fs": "^0.0.1-security",
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
